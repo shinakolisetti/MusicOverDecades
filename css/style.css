@@ -1,1 +1,22 @@
-# Empty CSS file for your own CSS
+.navbar-default {
+    border: none;
+    background: black;
+    background: rgba(0,0,0,1);
+}
+.navbar-brand {
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+.navbar-nav {
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+	/* This makes the nav bar home, etc highlight red */
+.nav>li>a:hover {
+    text-decoration: none;
+    color: crimson;
+    background: rgb(238, 238, 238);
+    background-color: rgba(238, 238, 238, 0);
+}
