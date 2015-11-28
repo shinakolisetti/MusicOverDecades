@@ -1,7 +1,37 @@
-.navbar-default {
+body{
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    background: url("backg1.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.brand { 
+    margin: 0;
+    padding: 30px 0 10px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0,0,0,1);
+    font-family: Copperplate,"Copperplate Gothic Light",fantasy;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: normal;
+    color: white;
+}
+.navbar-custom {
     border: none;
     background: black;
-    background: rgba(0,0,0,1);
+    background: rgba(252,236,252,1);
+    background: rgba(69,4,49,1);
+    background: rgba(69,4,49,1);
+    background: rgba(69,4,49,1);
+    background: -moz-linear-gradient(45deg, rgba(69,4,49,1) 10%, rgba(69,4,49,1) 24%, rgba(102,7,74,1) 57%, rgba(128,9,94,1) 70%, rgba(253,137,215,1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(10%, rgba(69,4,49,1)), color-stop(24%, rgba(69,4,49,1)), color-stop(57%, rgba(102,7,74,1)), color-stop(70%, rgba(128,9,94,1)), color-stop(100%, rgba(253,137,215,1)));
+    background: -webkit-linear-gradient(45deg, rgba(69,4,49,1) 10%, rgba(69,4,49,1) 24%, rgba(102,7,74,1) 57%, rgba(128,9,94,1) 70%, rgba(253,137,215,1) 100%);
+    background: -o-linear-gradient(45deg, rgba(69,4,49,1) 10%, rgba(69,4,49,1) 24%, rgba(102,7,74,1) 57%, rgba(128,9,94,1) 70%, rgba(253,137,215,1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(69,4,49,1) 10%, rgba(69,4,49,1) 24%, rgba(102,7,74,1) 57%, rgba(128,9,94,1) 70%, rgba(253,137,215,1) 100%);
+    background: linear-gradient(45deg, rgba(69,4,49,1) 10%, rgba(69,4,49,1) 24%, rgba(102,7,74,1) 57%, rgba(128,9,94,1) 70%, rgba(253,137,215,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#450431', endColorstr='#fd89d7', GradientType=1 );
 }
 .navbar-brand {
     text-transform: uppercase;
@@ -13,10 +43,77 @@
     font-weight: 400;
     letter-spacing: 3px;
 }
+nav.navbar.navbar-custom {
+    margin-bottom: 0;
+}
+.container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
 	/* This makes the nav bar home, etc highlight red */
 .nav>li>a:hover {
     text-decoration: none;
-    color: crimson;
+    color: rgba(229,45,255,1);
     background: rgb(238, 238, 238);
     background-color: rgba(238, 238, 238, 0);
+}
+a{
+    color:white;
+}
+.navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+@media screen and (min-width:768px) {
+    .top-divider {
+        margin-top: 0;
+    }
+
+    .img-left {
+        float: left;
+        margin-right: 25px;
+    }
+
+    .navbar {
+        border-radius: 0;
+    }
+
+    .navbar-header {
+        display: none;
+    }
+
+    .navbar {
+        min-height: 0;
+    }
+
+    /*.navbar-custom {
+        border: none;
+        background: black;
+        background: rgba(0,0,0,0.6);
+    }
+*/
+    .nav>li>a {
+        padding: 35px;
+    }
+
+    .navbar-nav>li>a {
+        line-height: normal;
+    }
+
+    .navbar-nav {
+        display: table;
+        float: none;
+        margin: 0 auto;
+        table-layout: fixed;
+        font-size: 1.25em;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .box:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
 }
