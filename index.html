@@ -13,12 +13,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="js/jquery.js"></script>
-
 
     <!-- Custom CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
   </head>
@@ -40,11 +36,11 @@
 
             <div class = "collapse navbar-collapse" id = "bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="schedule.html">Schedule</a></li>
-                    <li><a href="#">Achievements</a></li>
-                    <li><a href="roster.html">Roster</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a class = "tabs" href="index.html">Home</a></li>
+                    <li><a class = "tabs" href="ana.html">Analytics</a></li>
+                   <!-- <li><a href="#">Achievements</a></li>
+                    <li><a href="roster.html">Roster</a></li> -->
+                    <li><a class = "tabs" href="contact.html">About Us</a></li>
                 </ul>
             </div>
         </div> <!-- container-->
@@ -94,55 +90,62 @@
 							</p>
 						</div>-->
 					</div>
-				</div> <a class="left carousel-control" href="#carousel-66737" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-66737" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+				</div> 
+					<a class="left carousel-control" href="#carousel-66737" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left"></span>
+					</a>
+					<a class="right carousel-control" href="#carousel-66737" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+					</a>
 			</div>
 			<div class="jumbotron">
-				<h2>
-					Hello, world!
+				<h2 class = "heading">
+					Welcome to Music Over Decades
 				</h2>
-				<p>
-					This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
+				<p class = "center">
+					This is a website where you can find trends in music throughout the decades and figure out how to use this data to help artists advertise, see how you can analyse this data for marketing efforts and more. (EDIT)
 				</p>
-				<p>
+				<!--<p>
 					<a class="btn btn-primary btn-large" href="#">Learn more</a>
-				</p>
+				</p>-->
 			</div>
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-4">
-			<h2>
-				Heading
-			</h2>
+		<div><h2 class = "heading"> Analyse Data </h2><hr></div>
+
+		<div class="col-md-5">
+			<h3 class = "heading">Music Popularity</h3>
+			<p>
+				Popularity by Locations and genre. Marketing ideas for hosting concerts, New raising artist can analyze data and choose suitable location to perform at.
+			</p>
+		</div>
+		<div class="col-md-1">&#x266b;</div>
+		<div class="col-md-5">
+			<h3 class = "heading">More Analytics</h3>
 			<p>
 				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
 			</p>
-			<p>
-				<a class="btn" href="#">View details »</a>
-			</p>
 		</div>
-		<div class="col-md-4">
-			<h2>
-				Heading
-			</h2>
+		<div class="col-md-1">&#x270e;</div>
+	</div>
+	<div class="row">
+		<div class="col-md-5">
+			<h3 class = "heading">Top Artists</h3>
 			<p>
-				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+				Check out who's on the top of the list. Compare why and how they are on the top. Check thier hotness, dance ability, genre and more.
 			</p>
-			<p>
-				<a class="btn" href="#">View details »</a>
-			</p>
+			
 		</div>
-		<div class="col-md-4">
-			<h2>
-				Heading
-			</h2>
+		<div class="col-md-1">&#x265a;</div>
+		<div class="col-md-5">
+			<h3 class = "heading">Top Songs</h3>
 			<p>
-				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+				Which songs is on the top? Compare and analyse the data based on familiarity and years. 
 			</p>
-			<p>
-				<a class="btn" href="#">View details »</a>
-			</p>
+			
 		</div>
+		<div class="col-md-1">&#x2606;</div>
 	</div>
 </div>
 
