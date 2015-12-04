@@ -312,3 +312,8 @@ table#myTable {
     margin-left:auto; 
     margin-right:auto;
   }
+ 
+ .tables {
+    x-overflow: scroll;
+    y-overflow:scroll;
+ }
