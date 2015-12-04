@@ -37,20 +37,27 @@
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse"
 					data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle navigation</span> <span
-						class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
+					<span class="sr-only">Toggle navigation</span> 
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span>
 				</button>
 
 				<!-- =============== hidden nav bar ===================== -->
-				<a class="navbar-brand" href="test.html">MOD</a>
+				<a class="navbar-brand" href="index.jsp">MOD</a>
 			</div>
 
 			<div class="collapse navbar-collapse"
 				id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<li><a class="tabs" href="index.jsp">Home</a></li>
-					<li><a class="tabs" href="analytics.jsp">Analytics</a></li>
+					<li><a class="tab" href="analytics.jsp">Analytics</a>
+						<ul class ="sub-menu">
+							<li><a href ="#">Top Charts</a></li>
+							<li><a href ="#">Top Artist</a></li>
+							<li><a href ="#">Other</a></li>
+						</ul>
+					</li>
 					<li><a class="tabs" href="contact.jsp">About Us</a></li>
 				</ul>
 			</div>
@@ -65,6 +72,9 @@
 <sql:query dataSource="${snapshot}" var="result">
 SELECT name, genre from MusicOverDecades.artist;
 </sql:query>
+
+<!-- Table creation-->
+
 
 <table border="1" width="100%">
 <tr>

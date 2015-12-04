@@ -28,8 +28,6 @@ body{
     background: black;
     background: rgba(252,236,252,1);
     background: rgba(69,4,49,1);
-    background: rgba(69,4,49,1);
-    background: rgba(69,4,49,1);
     background: -moz-linear-gradient(45deg, rgba(69,4,49,1) 10%, rgba(69,4,49,1) 24%, rgba(102,7,74,1) 57%, rgba(128,9,94,1) 70%, rgba(253,137,215,1) 100%);
     background: -webkit-gradient(left bottom, right top, color-stop(10%, rgba(69,4,49,1)), color-stop(24%, rgba(69,4,49,1)), color-stop(57%, rgba(102,7,74,1)), color-stop(70%, rgba(128,9,94,1)), color-stop(100%, rgba(253,137,215,1)));
     background: -webkit-linear-gradient(45deg, rgba(69,4,49,1) 10%, rgba(69,4,49,1) 24%, rgba(102,7,74,1) 57%, rgba(128,9,94,1) 70%, rgba(253,137,215,1) 100%);
@@ -107,7 +105,7 @@ a.tabs{
         line-height: normal;
     }
 
-    .navbar-nav {
+    .navbar-nav, .sub-menu {
         display: table;
         float: none;
         margin: 0 auto;
@@ -155,4 +153,58 @@ p.center{
 .col-md-1 {
     font-size: 6.4em;
     color: plum;
+}
+
+/*The drop down menu css*/
+/*Clears an annoying bug*/
+ul.nav.navbar-nav:after{
+    display: block;
+    clear: both;
+}
+
+.sub-menu{
+    width:160%;
+    padding:5px 0px;
+    position:absolute;
+    top:100%;
+    left:0px;
+    z-index:-1;
+    opacity:0;
+    transition:opacity linear 0.15s;
+    box-shadow:0px 2px 3px rgba(0,0,0,0.2);
+    background: white;
+}
+
+/*Hover drop down*/
+/*.nav>li>a.tabs:hover */
+.nav>li:hover .sub-menu{
+    z-index: 1;
+    opacity: 1;
+    text-decoration: none;
+    color: rgba(229,45,255,1);
+}
+.sub-menu li{
+    display:block;
+    font-size:16px;
+}
+.sub-menu li a {
+    padding:10px 30px;
+    display:block;
+    color:black;
+}
+.sub-menu li a:hover{
+	text-decoration:none;
+	color: rgba(229,45,255,1);
+}
+.nav>li>a.tab:hover {
+	transition:all linear 0.15s;
+    text-decoration: none;
+    color: rgba(229,45,255,1);
+    background: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 1);
+}
+/* When not hovered it says white */
+.nav a.tab{
+    transition:all linear 0.15s;
+    color:white;
 }
