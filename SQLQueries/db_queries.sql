@@ -31,11 +31,19 @@ FROM MusicOverDecades.listeners l1, MusicOverDecades.artist a, MusicOverDecades.
 WHERE l1.listenerId = l2.listenerId AND a.artistId = l2.artistId AND a.location LIKE l1.location;
 
 #GENRE BY AGE
-SELECT
-  a.genre,
-  COUNT(*) AS `num`
-FROM
-  MusicOverDecades.artist a, MusicOverDecades.listeners l
+SELECT l.first_name, l.last_name, l.age, a.genre
+FROM MusicOverDecades.artist a, MusicOverDecades.listeners l, MusicOverDecades.likes l1
+WHERE a.artistId = l1.artistId AND l.listenerId = l1.listenerId AND a.genre <> ''
+GROUP BY a.genre;
+
+SELECT l.first_name, l.last_name, l.age, a.genre
+FROM MusicOverDecades.artist a, MusicOverDecades.listeners l, MusicOverDecades.likes l1
+WHERE a.artistId = l1.artistId AND l.listenerId = l1.listenerId AND a.genre <> ''
+GROUP BY l.age;
+
+
+SELECT a.genre, COUNT(*) AS `num`
+FROM MusicOverDecades.artist a, MusicOverDecades.listeners l
 WHERE a.genre <> ''
 GROUP BY a.genre
 ORDER BY `num` DESC;
