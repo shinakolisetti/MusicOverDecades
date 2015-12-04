@@ -76,7 +76,7 @@ SELECT name, genre from MusicOverDecades.artist;
 
 	<!-- Table creation-->
 <div class="tables">
-	<table cellspacing='0' border="1" id="myTable" class="tablesorter">
+	<table border="1" id="myTable" class="tablesorter">
 		<tr>
 			<th>name</th>
 			<th>genre</th>
