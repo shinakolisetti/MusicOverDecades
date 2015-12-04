@@ -36,9 +36,11 @@
 
             <div class = "collapse navbar-collapse" id = "bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a class = "tabs" href="index.jsp">Home</a></li>
-                    <li><a class = "tabs" href="analytics.jsp">Analytics</a></li>
-                    <li><a class = "tabs" href="contact.jsp">About Us</a></li>
+                   <li><a class="tabs" href="index.jsp">Home</a></li>
+					<li><a class="tabs" href="analytics.jsp">Analytics</a>
+					<li><a class="tabs" href="topcharts.jsp">Top Charts</a></li>
+					<li><a class="tabs" href="topartists.jsp">Top Artist</a></li>
+					<li><a class="tabs" href="contact.jsp">Other</a></li>
                 </ul>
             </div>
         </div> <!-- container-->

@@ -20,8 +20,18 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+<!-- Demo styling -->
+<link href="tablesorter/docs/css/jq.css" rel="stylesheet">
+
+<!-- jQuery: required (tablesorter works with jQuery 1.2.3+) -->
+<!-- <script src="tablesorter/docs/js/jquery-1.2.6.min.js"></script>-->
+
+<!-- Pick a theme, load the plugin & initialize plugin -->
+<link href="tablesorter/css/theme.default.css" rel="stylesheet">
+<script src="tablesorter/js/jquery.tablesorter.min.js"></script>
+<script src="tablesorter/js/jquery.tablesorter.widgets.min.js"></script>
 
 <!-- Custom CSS -->
 <link href="css/style.css" rel="stylesheet">
@@ -61,21 +71,28 @@
 		user="db_student" password="db-student" />
 
 <sql:query dataSource="${snapshot}" var="result">
-SELECT name, genre from MusicOverDecades.artist;
+SELECT l1.first_name, l1.last_name, l1.gender, l1.location , a.name, a.location as artist_Loc
+FROM MusicOverDecades.listeners l1, MusicOverDecades.artist a, MusicOverDecades.likes l2
+WHERE l1.listenerId = l2.listenerId AND a.artistId = l2.artistId AND a.location LIKE l1.location;
 </sql:query>
 
 	<!-- Table creation-->
 <div class="tables">
 	<table cellspacing='0' border="1" id="myTable" class="tablesorter">
 		<tr>
-			<th>name</th>
-			<th>genre</th>
+			<th>Listeners FirstName</th>
+			<th>Listeners lastName</th>
+			<th>Location</th>
+			<th>Artist Name</th>
 
 		</tr>
 		<c:forEach var="row" items="${result.rows}">
 			<tr>
+				<td><c:out value="${row.first_name}" /></td>
+				<td><c:out value="${row.last_name}" /></td>
+				<td><c:out value="${row.location}" /></td>
 				<td><c:out value="${row.name}" /></td>
-				<td><c:out value="${row.genre}" /></td>
+				
 			</tr>
 		</c:forEach>
 	</table>
