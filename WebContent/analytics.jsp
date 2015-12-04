@@ -1,3 +1,6 @@
+<%@ page import="java.io.*,java.util.*,java.sql.*"%>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -36,11 +39,9 @@
 
             <div class = "collapse navbar-collapse" id = "bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a class = "tabs" href="index.html">Home</a></li>
-                    <li><a class = "tabs" href="ana.html">Analytics</a></li>
-                   <!-- <li><a href="#">Achievements</a></li>
-                    <li><a href="roster.html">Roster</a></li> -->
-                    <li><a class = "tabs" href="contact.html">About Us</a></li>
+                    <li><a class = "tabs" href="index.jsp">Home</a></li>
+                    <li><a class = "tabs" href="analytics.jsp">Analytics</a></li>
+                    <li><a class = "tabs" href="contact.jsp">About Us</a></li>
                 </ul>
             </div>
         </div> <!-- container-->

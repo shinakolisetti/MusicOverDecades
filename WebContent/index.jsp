@@ -36,8 +36,8 @@
 
             <div class = "collapse navbar-collapse" id = "bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a class = "tabs" href="index.html">Home</a></li>
-                    <li><a class = "tabs" href="ana.html">Analytics</a></li>
+                    <li><a class = "tabs" href="index.jsp">Home</a></li>
+                    <li><a class = "tabs" href="analytics.jsp">Analytics</a></li>
                     <li><a class = "tabs" href="contact.html">About Us</a></li>
                 </ul>
             </div>
@@ -101,7 +101,7 @@
 					Welcome to Music Over Decades
 				</h2>
 				<p class = "center">
-					This is a website where you can find trends in music throughout the decades and figure out how to use this data to help artists advertise, see how you can analyse this data for marketing efforts and more. (EDIT)
+					This is a website where you can find trends in music throughout the decades and figure out how to use this data to help artists advertise, see how you can analyze this data for marketing efforts and more. (EDIT)
 				</p>
 				<!--<p>
 					<a class="btn btn-primary btn-large" href="#">Learn more</a>
@@ -110,7 +110,7 @@
 		</div>
 	</div>
 	<div class="row">
-		<div><h2 class = "heading"> Analyse Data </h2><hr></div>
+		<div><h2 class = "heading"> Analyze Data </h2><hr></div>
 
 		<div class="col-md-5">
 			<h3 class = "heading">Music Popularity</h3>
@@ -139,7 +139,7 @@
 		<div class="col-md-5">
 			<h3 class = "heading">Top Songs</h3>
 			<p>
-				Which songs is on the top? Compare and analyse the data based on familiarity and years.
+				Which songs is on the top? Compare and analyze the data based on familiarity and years.
 			</p>
 			
 		</div>
