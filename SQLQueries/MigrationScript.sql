@@ -74,7 +74,7 @@ CREATE TABLE IF NOT EXISTS `MusicOverDecades`.`listeners` (
   `first_name` VARCHAR(50) NOT NULL,
   `last_name` VARCHAR(50) NOT NULL,
   `gender` VARCHAR(50) NOT NULL, 
-  `country` VARCHAR(50) NOT NULL,
+  `location` VARCHAR(50) NOT NULL,
   `age` INT(11) NULL DEFAULT NULL,
   PRIMARY KEY (`listenerId`))
 ENGINE = InnoDB

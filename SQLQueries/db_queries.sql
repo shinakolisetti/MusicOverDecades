@@ -6,13 +6,11 @@ SELECT * FROM MusicOverDecades.listens_to;
 SELECT * FROM MusicOverDecades.listeners;
 
 # Music popularity by location: Select the song title, song hotness and artist location
-
 #ALL LOCATIONS
 SELECT a.name, s.title, s.hotness, a.location, a.genre, s.year
 FROM MusicOverDecades.song s, MusicOverDecades.artist a, MusicOverDecades.artist_song l
-WHERE a.artistId = l.artistId AND s.songId = l.songId AND s.hotness <> 'nan'
+WHERE a.artistId = l.artistId AND s.songId = l.songId AND s.hotness <> 'nan' AND a.location <> ''
 ORDER BY s.hotness DESC;
-
 #BY LOCATION:
 SELECT a.name, s.title, s.hotness, a.location, s.year
 FROM MusicOverDecades.song s, MusicOverDecades.artist a, MusicOverDecades.artist_song l
@@ -25,3 +23,25 @@ FROM MusicOverDecades.song s, MusicOverDecades.artist a, MusicOverDecades.artist
 WHERE a.artistId = l.artistId AND s.songId = l.songId AND s.hotness <> 'nan' AND a.genre LIKE '%rock%'
 ORDER BY s.hotness DESC;
 
+
+#Listeners to Artists/Songs
+#BY LOCATION:
+SELECT l1.first_name, l1.last_name, l1.gender, l1.location, a.name, a.location
+FROM MusicOverDecades.listeners l1, MusicOverDecades.artist a, MusicOverDecades.likes l2
+WHERE l1.listenerId = l2.listenerId AND a.artistId = l2.artistId AND a.location LIKE l1.location;
+
+#GENRE BY AGE
+SELECT
+  a.genre,
+  COUNT(*) AS `num`
+FROM
+  MusicOverDecades.artist a, MusicOverDecades.listeners l
+WHERE a.genre <> ''
+GROUP BY a.genre
+ORDER BY `num` DESC;
+  
+
+
+SELECT a.genre, COUNT(a.genre)
+FROM MusicOverDecades.listeners l1, MusicOverDecades.artist a, MusicOverDecades.likes l2
+WHERE l1.listenerId = l2.listenerId AND a.artistId = l2.artistId;
