@@ -5,7 +5,6 @@
 <%@ page import="javax.servlet.http.*,javax.servlet.*"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
- 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,15 +16,22 @@
 <title>MusicOverDecades</title>
 
 <!-- Bootstrap Core CSS -->
-<meta name="description"
-	content="Source code generated using layoutit.com">
-<meta name="author" content="LayoutIt!">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+<!-- Demo styling -->
+<link href="tablesorter/docs/css/jq.css" rel="stylesheet">
+
+<!-- jQuery: required (tablesorter works with jQuery 1.2.3+) -->
+<!-- <script src="tablesorter/docs/js/jquery-1.2.6.min.js"></script>-->
+
+<!-- Pick a theme, load the plugin & initialize plugin -->
+<link href="tablesorter/css/theme.default.css" rel="stylesheet">
+<script src="tablesorter/js/jquery.tablesorter.min.js"></script>
+<script src="tablesorter/js/jquery.tablesorter.widgets.min.js"></script>
 
 <!-- Custom CSS -->
 <link href="css/style.css" rel="stylesheet">
@@ -37,10 +43,9 @@
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse"
 					data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle navigation</span> 
-					<span class="icon-bar"></span> 
-					<span class="icon-bar"></span> 
-					<span class="icon-bar"></span>
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
 				</button>
 
 				<!-- =============== hidden nav bar ===================== -->
@@ -52,12 +57,11 @@
 				<ul class="nav navbar-nav">
 					<li><a class="tabs" href="index.jsp">Home</a></li>
 					<li><a class="tab" href="analytics.jsp">Analytics</a>
-						<ul class ="sub-menu">
-							<li><a href ="#">Top Charts</a></li>
-							<li><a href ="#">Top Artist</a></li>
-							<li><a href ="#">Other</a></li>
-						</ul>
-					</li>
+						<ul class="sub-menu">
+							<li><a href="#">Top Charts</a></li>
+							<li><a href="#">Top Artist</a></li>
+							<li><a href="#">Other</a></li>
+						</ul></li>
 					<li><a class="tabs" href="contact.jsp">About Us</a></li>
 				</ul>
 			</div>
@@ -65,31 +69,32 @@
 		<!-- container-->
 	</nav>
 
-<sql:setDataSource var="snapshot" driver="com.mysql.jdbc.Driver"
-	url="jdbc:mysql://mymusicdb.c4bpngja197w.us-west-2.rds.amazonaws.com:3306/MusicOverDecades"
-	user="db_student" password="db-student" />
+	<sql:setDataSource var="snapshot" driver="com.mysql.jdbc.Driver"
+		url="jdbc:mysql://mymusicdb.c4bpngja197w.us-west-2.rds.amazonaws.com:3306/MusicOverDecades"
+		user="db_student" password="db-student" />
 
 <sql:query dataSource="${snapshot}" var="result">
 SELECT name, genre from MusicOverDecades.artist;
 </sql:query>
 
-<!-- Table creation-->
+	<!-- Table creation-->
+<div class="tables">
+	<table cellspacing='0' border="1" id="myTable" class="tablesorter">
+		<tr>
+			<th>name</th>
+			<th>genre</th>
 
-
-<table border="1" width="100%">
-<tr>
-   <th>name</th>
-   <th>genre</th>
-  
-</tr>
-<c:forEach var="row" items="${result.rows}">
-<tr>
-   <td><c:out value="${row.name}"/></td>
-   <td><c:out value="${row.genre}"/></td>
-   
-</tr>
-</c:forEach>
-</table>
+		</tr>
+		<c:forEach var="row" items="${result.rows}">
+			<tr>
+				<td><c:out value="${row.name}" /></td>
+				<td><c:out value="${row.genre}" /></td>
+			</tr>
+		</c:forEach>
+	</table>
+</div>
 
 </body>
+
+
 </html>
