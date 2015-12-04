@@ -38,7 +38,7 @@
                 <ul class="nav navbar-nav">
                     <li><a class = "tabs" href="index.jsp">Home</a></li>
                     <li><a class = "tabs" href="analytics.jsp">Analytics</a></li>
-                    <li><a class = "tabs" href="contact.html">About Us</a></li>
+                    <li><a class = "tabs" href="contact.jsp">About Us</a></li>
                 </ul>
             </div>
         </div> <!-- container-->
