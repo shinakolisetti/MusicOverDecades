@@ -5,6 +5,15 @@ $(document).ready(function(){
 });
 
 
+function onSubmit(){
+	/*build query
+	 * build the table
+	 *show the div */
+	$('.specifications').hide();
+	$('.tables').show();
+}
+
+
 /* pass in array [] of fields for the table*/
 function buildTables(fields_arr){
 		

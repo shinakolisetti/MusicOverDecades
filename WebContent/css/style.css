@@ -315,7 +315,7 @@ table#myTable {
  
  .tables {
    position: fixed;
-    top: 100px;
+    top: 120px;
     left: 20px;
     bottom: 20px;
     right: 20px;
@@ -343,4 +343,18 @@ table#myTable {
 }
 ::-webkit-scrollbar-thumb:window-inactive {
 	background: rgba(255,0,0,0.4); 
+}
+
+/* Specifications div */
+.specifications {
+    position: absolute;
+   	top: 120px;
+   	left: 100px;
+    bottom: 20px;
+    right: 20px;
+   	margin-left:auto; 
+    margin-right:auto;
+    float:center;
+    text-align: center;
+    border: 1px solid blue;
 }
