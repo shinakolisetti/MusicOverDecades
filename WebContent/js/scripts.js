@@ -9,8 +9,8 @@ function onSubmit(){
 	/*build query
 	 * build the table
 	 *show the div */
-	$('.specifications').hide();
-	$('.tables').show();
+	('specifications').hide();
+	('.tables').show();
 }
 
 

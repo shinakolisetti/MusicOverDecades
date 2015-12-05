@@ -315,7 +315,7 @@ table#myTable {
  
  .tables {
    position: fixed;
-    top: 120px;
+    top: 160px;
     left: 20px;
     bottom: 20px;
     right: 20px;
@@ -349,12 +349,12 @@ table#myTable {
 .specifications {
     position: absolute;
    	top: 120px;
-   	left: 100px;
-    bottom: 20px;
-    right: 20px;
+   	left: 60px;
+    bottom: 180px;
+    right: 60px;
    	margin-left:auto; 
     margin-right:auto;
     float:center;
     text-align: center;
-    border: 1px solid blue;
 }
+ 
