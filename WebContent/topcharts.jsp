@@ -62,7 +62,7 @@
 
 	<!-- For all drop downs, text fields and query specification fields -->
 	<div class="specifications">
-		<form action="MusicServlet">
+		<form action="ChartServlet">
 			<fieldset>
 				<legend>Specify Your Search:</legend>
 				Location: <input type="text" id="location" name="location" value="" /><br>

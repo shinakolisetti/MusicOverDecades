@@ -10,11 +10,20 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   <servlet>
-        <servlet-name>Music</servlet-name>
+        <servlet-name>Chart</servlet-name>
         <servlet-class>com.topcharts.jsp.servlet.Connector</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>Music</servlet-name>
-        <url-pattern>/MusicServlet</url-pattern>
+        <servlet-name>Chart</servlet-name>
+        <url-pattern>/ChartServlet</url-pattern>
+    </servlet-mapping>
+    
+      <servlet>
+        <servlet-name>Artist</servlet-name>
+        <servlet-class>com.topcharts.jsp.servlet.Connector</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Artist</servlet-name>
+        <url-pattern>/ArtistServlet</url-pattern>
     </servlet-mapping>
 </web-app>
