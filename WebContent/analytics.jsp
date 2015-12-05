@@ -87,8 +87,7 @@
 					<option value="60s">1960-1970</option>
 					<option value="70s">1970-1980</option>
 					<option value="80s">1980-1990</option>
-					<option value="90s">1970-1980</option>
-					<option value="00s">1990-2000</option>
+					<option value="90s">1990-2000</option>
 					<option value="00s">2000-2010</option>
 				</select>
 				</div>
