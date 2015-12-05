@@ -68,7 +68,7 @@
 				Location: <input type="text" id="location" name="location" value="Enter City or State" onClick='document.getElementById("location").value= "";' /><br>
 				Genre: 
 				<select id="genre">
-					<option>none</option>
+					<option></option>
 					<option>rock</option>
 					<option>hip-hop/trip-hop</option>
 					<option>classical</option>

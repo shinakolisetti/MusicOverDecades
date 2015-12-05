@@ -6,10 +6,22 @@ $(document).ready(function(){
 
 
 function onSubmit(){
-	/*build query
-	 * build the table
-	 *show the div */	
+	/*build query*/
+	var location = document.getElementById("location").value.trim();
+	var genre = document.getElementById("genre").value.trim();
+	var sqlQuery = "SELECT a.name, s.title, s.hotness, a.location, s.year FROM MusicOverDecades.song s, MusicOverDecades.artist a, MusicOverDecades.artist_song l WHERE a.artistId = l.artistId AND s.songId = l.songId AND s.hotness <> 'nan'";
+	if(location!="" && location!="Enter City or State" && location != null){
+		sqlQuery += "AND a.location LIKE '%"+location+"'%";
+	}
+	if(genre!="" && genre != null){
+		sqlQuery+= "AND a.genre LIKE '%"+genre"%'";
+	}
+	sqlQuery+="ORDER BY s.hotness DESC;";
+	 
+	/*show the div */	
 	$('tables').show();
+	console.log(sqlQuery);
+	return sqlQuery;
 }
 
 
