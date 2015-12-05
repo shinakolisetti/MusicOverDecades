@@ -70,33 +70,33 @@
 		url="jdbc:mysql://mymusicdb.c4bpngja197w.us-west-2.rds.amazonaws.com:3306/MusicOverDecades"
 		user="db_student" password="db-student" />
 
-<sql:query dataSource="${snapshot}" var="result">
-SELECT l1.first_name, l1.last_name, l1.gender, l1.location , a.name, a.location as artist_Loc
-FROM MusicOverDecades.listeners l1, MusicOverDecades.artist a, MusicOverDecades.likes l2
-WHERE l1.listenerId = l2.listenerId AND a.artistId = l2.artistId AND a.location LIKE l1.location;
-</sql:query>
+	<sql:query dataSource="${snapshot}" var="result">
+		SELECT l1.first_name, l1.last_name, l1.gender, l1.location , a.name, a.location as artist_Loc
+		FROM MusicOverDecades.listeners l1, MusicOverDecades.artist a, MusicOverDecades.likes l2
+		WHERE l1.listenerId = l2.listenerId AND a.artistId = l2.artistId AND a.location LIKE l1.location;
+	</sql:query>
 
 	<!-- Table creation-->
-<div class="tables">
-	<table cellspacing='0' border="1" id="myTable" class="tablesorter">
-		<tr>
-			<th>Listeners FirstName</th>
-			<th>Listeners lastName</th>
-			<th>Location</th>
-			<th>Artist Name</th>
-
-		</tr>
-		<c:forEach var="row" items="${result.rows}">
+	<div class="tables">
+		<table cellspacing='0' border="1" id="myTable" class="tablesorter">
 			<tr>
-				<td><c:out value="${row.first_name}" /></td>
-				<td><c:out value="${row.last_name}" /></td>
-				<td><c:out value="${row.location}" /></td>
-				<td><c:out value="${row.name}" /></td>
-				
+				<th>Listeners FirstName</th>
+				<th>Listeners lastName</th>
+				<th>Location</th>
+				<th>Artist Name</th>
+
 			</tr>
-		</c:forEach>
-	</table>
-</div>
+			<c:forEach var="row" items="${result.rows}">
+				<tr>
+					<td><c:out value="${row.first_name}" /></td>
+					<td><c:out value="${row.last_name}" /></td>
+					<td><c:out value="${row.location}" /></td>
+					<td><c:out value="${row.name}" /></td>
+
+				</tr>
+			</c:forEach>
+		</table>
+	</div>
 
 </body>
 
