@@ -21,7 +21,7 @@ public class Connector extends HttpServlet {
 		String location = request.getParameter("location");
 		String genre = request.getParameter("genre");
 
-		String sqlQuery="SELECT a.name, s.title, s.hotness, a.location, s.year FROM MusicOverDecades.song s, MusicOverDecades.artist a, MusicOverDecades.artist_song l WHERE a.artistId = l.artistId AND s.songId = l.songId AND s.hotness <> 'nan'";
+		String sqlQuery="SELECT a.name, s.title, s.hotness, a.location, a.genre, s.year FROM MusicOverDecades.song s, MusicOverDecades.artist a, MusicOverDecades.artist_song l WHERE a.artistId = l.artistId AND s.songId = l.songId AND s.hotness <> 'nan'";
 		if(location!="" && location!="Enter City or State" && location != null){
 			sqlQuery += " AND a.location LIKE \'%"+location+"%\'";
 		}
@@ -83,20 +83,42 @@ public class Connector extends HttpServlet {
 			conn = (Connection) DriverManager.getConnection(url+dbName,userName,password);  
 			Statement statement = (Statement) conn.createStatement();
 			ResultSet resultSet = statement.executeQuery(sqlQuery);
+			
+			/*Div for any descriptions/graphs + back button*/
+			output+="<div class=\"specifications\">"
+					+"<a href=\"topcharts.jsp\" style=\"float:left;\">< BACK</a><br>"
+					+"</div>";
+
+			
+			/*Create Tables*/
 			output+="<div class=\"tables\">"
-					+"<a href=\"topcharts.jsp\">< BACK</a><br>"
 					+"<table border=\"1\" id=\"myTable\" class=\"tablesorter\">"
 					+"<tr>"
-					+"<th>name</th>"
-					+"<th>location</th>"
+					+"<th></th>"
+					+"<th>Artist Name</th>"
+					+"<th>Song Title</th>"
+					+"<th>Song Hotness</th>"
+					+"<th>Artist Location</th>"
+					+"<th>Genre</th>"
+					+"<th>Song Release Year</th>"
 					+"</tr>";
+			int i=1;
 			while(resultSet.next()){
 				String name=resultSet.getString("name");
 				String loc = resultSet.getString("location");
+				String title=resultSet.getString("title");
+				String hotness = resultSet.getString("hotness");
+				String gnre=resultSet.getString("genre");
+				String year = resultSet.getString("year");				
 				if((name!=null||name!="") && (loc!=null||loc!="")){
 					output+="<tr>"
-							+"<td>"+name+"</td>";
-					output+="<td>"+loc+"</td>" 
+							+"<th>"+ i++ +"</th>"
+							+"<td>"+name+"</td>"
+							+"<td>"+title+"</td>"
+							+"<td>"+hotness+"</td>"
+							+"<td>"+loc+"</td>"
+							+"<td>"+gnre+"</td>"
+							+"<td>"+year+"</td>"
 							+"</tr>";
 				}
 			}
