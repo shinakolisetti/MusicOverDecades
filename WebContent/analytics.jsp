@@ -64,7 +64,7 @@
 				<legend>Specify Your Search:</legend>
 				<div class="search"><div class="label">Genre:</div>
 				<select id="genre" name = "genre">
-					<option></option>
+					<option value=""></option>
 					<option value="rock">rock</option>
 					<option value="hop">hip-hop/trip-hop</option>
 					<option value="classical">classical</option>

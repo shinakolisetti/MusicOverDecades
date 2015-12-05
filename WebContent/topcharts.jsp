@@ -69,7 +69,7 @@
 				<div class="search"><div class="label">Location:</div><input type="text" class="round" id="location" name="location" value="" /><br></div>
 				<div class="search"> <div class="label">Genre:</div> 
 				<select id="genre" name = "genre">
-					<option></option>
+					<option value=""></option>
 					<option value="rock">rock</option>
 					<option value="hop">hip-hop/trip-hop</option>
 					<option value="classical">classical</option>

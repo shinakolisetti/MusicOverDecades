@@ -86,8 +86,8 @@
 						<br> 
 				</div>
 				<div class="search"><div class="label">Genre:</div>
-				<select id="genre" name = "genre">
-					<option></option>
+				<select id="genre name = "genre">
+					<option value=""></option>
 					<option value="rock">rock</option>
 					<option value="hop">hip-hop/trip-hop</option>
 					<option value="classical">classical</option>
