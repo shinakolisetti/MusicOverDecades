@@ -30,6 +30,7 @@
 
 <!-- Custom CSS -->
 <link href="css/style.css" rel="stylesheet">
+<link href="css/test.css" rel="stylesheet">
 
 </head>
 <body>
@@ -66,8 +67,8 @@
 		<form action="ArtistServlet">
 			<fieldset>
 				<legend>Specify Your Search:</legend>
-				Location: <input type="text" id="location" name="location" value="" /><br>
-				Age: <select id="age" name = "age">
+				<div class="search"><div class="label">Location:</div> <input type="text" class="round" id="location" name="location" value="" /><br></div>
+				<div class="search"> <div class="label">Age:</div> <select id="age" name = "age">
 					<option></option>
 					<option value="10_15">10 - 15</option>
 					<option value="15_20">15 - 20</option>
@@ -83,7 +84,8 @@
 					<option value="65_70">65 - 70</option>
 				</select>
 						<br> 
-				Genre: 
+				</div>
+				<div class="search"><div class="label">Genre:</div>
 				<select id="genre" name = "genre">
 					<option></option>
 					<option value="rock">rock</option>
@@ -101,7 +103,8 @@
 					<option value="house">house/dub</option>
 				</select>
 						<br> 
-				<input type="submit" value="Submit" onClick="onSubmit()"> 
+				</div>
+				<input id="js-trigger-overlay" type="submit" value="Submit" onClick="onSubmit()"> 
 			</fieldset>
 		</form>
 	</div>

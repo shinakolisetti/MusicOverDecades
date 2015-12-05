@@ -84,7 +84,7 @@
 					<option value="house">house/dub</option>
 				</select>
 						<br> 
-				<input type="submit" value="Submit" onClick="onSubmit()"> 
+				<input id="js-trigger-overlay" type="submit" value="Submit" onClick="onSubmit()"> 
 			</fieldset>
 		</form>
 	</div>

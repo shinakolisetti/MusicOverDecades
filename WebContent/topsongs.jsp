@@ -48,7 +48,51 @@
             </div>
         </div> <!-- container-->
     </nav>
-
+	<!-- For all drop downs, text fields and query specification fields -->
+	<div class="specifications">
+		<form action="SongServlet">
+			<fieldset>
+				<legend>Specify Your Search:</legend>
+				Location: <input type="text" id="location" name="location" value="" /><br>
+				Age: <select id="age" name = "age">
+					<option></option>
+					<option value="10_15">10 - 15</option>
+					<option value="15_20">15 - 20</option>
+					<option value="20_25">20 - 25</option>
+					<option value="25_30">25 - 30</option>
+					<option value="30_35">30 - 35</option>
+					<option value="35_40">35 - 40</option>
+					<option value="40_45">40 - 45</option>
+					<option value="45_50">45 - 50</option>
+					<option value="50_55">50 - 55</option>
+					<option value="55_60">55 - 60</option>
+					<option value="60_65">60 - 65</option>
+					<option value="65_70">65 - 70</option>
+				</select>
+						<br> 
+				Genre: 
+				<select id="genre" name = "genre">
+					<option></option>
+					<option value="rock">rock</option>
+					<option value="hop">hip-hop/trip-hop</option>
+					<option value="classical">classical</option>
+					<option value="rap">rap</option>
+					<option value="jazz">jazz</option>
+					<option value="metal">metal</option>
+					<option value="punk">punk</option>
+					<option value="country">country</option>
+					<option value="disco">dance/disco</option>
+					<option value="electronic">electronic</option>
+					<option value="pop">pop</option>
+					<option value="soundtrack">soundtrack</option>
+					<option value="house">house/dub</option>
+				</select>
+						<br> 
+				<input id="js-trigger-overlay" type="submit" value="Submit" onClick="onSubmit()"> 
+			</fieldset>
+		</form>
+	</div>
+	
 		
   </body>
 </html>

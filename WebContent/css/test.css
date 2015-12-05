@@ -1,0 +1,37 @@
+@CHARSET "ISO-8859-1";
+/*Only visible for topartists jsp*/
+
+form{
+	width:500px;
+	margin:0 auto;
+}
+#location, select{
+	padding:6px 15px 6px 30px;
+	margin:3px; 
+	background: url('./images/search.png') no-repeat 8px 6px;
+	display: inline-block;
+}
+.round, select{
+	width:65%;
+	float:right;
+	
+}
+input[type=text]{
+	color:grey;
+}
+
+.label {
+    font-size: 21px;
+    font-weight: 100;
+    color: darkgray;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    position:fixed;
+}
+.search{
+	margin: 5px;
+    padding: 0;
+    overflow: auto;
+    position:relative;
+}
