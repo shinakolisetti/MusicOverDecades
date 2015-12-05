@@ -29,6 +29,7 @@
 
 <!-- Custom CSS -->
 <link href="css/style.css" rel="stylesheet">
+<link href="css/test.css" rel="stylesheet">
 
 </head>
 <body>
@@ -65,8 +66,8 @@
 		<form action="ChartServlet">
 			<fieldset>
 				<legend>Specify Your Search:</legend>
-				Location: <input type="text" id="location" name="location" value="" /><br>
-				Genre: 
+				<div class="search"><div class="label">Location:</div><input type="text" class="round" id="location" name="location" value="" /><br></div>
+				<div class="search"> <div class="label">Genre:</div> 
 				<select id="genre" name = "genre">
 					<option></option>
 					<option value="rock">rock</option>
@@ -84,6 +85,7 @@
 					<option value="house">house/dub</option>
 				</select>
 						<br> 
+					</div>
 				<input id="js-trigger-overlay" type="submit" value="Submit" onClick="onSubmit()"> 
 			</fieldset>
 		</form>
