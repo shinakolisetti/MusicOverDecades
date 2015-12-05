@@ -1,4 +1,4 @@
-package com.topartists.jsp.servlet;
+package com.topcharts.jsp.servlet;
 
 import java.io.IOException;
 
@@ -15,7 +15,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class Connector extends HttpServlet {
+public class ChartConnector extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// reading the user input
 		String location = request.getParameter("location");
@@ -105,19 +105,19 @@ public class Connector extends HttpServlet {
 			int i=1;
 			while(resultSet.next()){
 				String name=resultSet.getString("name");
-				String loc = resultSet.getString("location");
+				location = resultSet.getString("location");
 				String title=resultSet.getString("title");
 				String hotness = resultSet.getString("hotness");
-				String gnre=resultSet.getString("genre");
+				genre=resultSet.getString("genre");
 				String year = resultSet.getString("year");				
-				if((name!=null||name!="") && (loc!=null||loc!="")){
+				if((name!=null||name!="") && (location!=null||location!="")){
 					output+="<tr>"
 							+"<th>"+ i++ +"</th>"
 							+"<td>"+name+"</td>"
 							+"<td>"+title+"</td>"
 							+"<td>"+hotness+"</td>"
-							+"<td>"+loc+"</td>"
-							+"<td>"+gnre+"</td>"
+							+"<td>"+location+"</td>"
+							+"<td>"+genre+"</td>"
 							+"<td>"+year+"</td>"
 							+"</tr>";
 				}
