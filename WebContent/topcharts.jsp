@@ -65,7 +65,7 @@
 		<form action="MusicServlet">
 			<fieldset>
 				<legend>Specify Your Search:</legend>
-				Location: <input type="text" id="location" name="location" value="Enter City or State" onClick='document.getElementById("location").value= "";' /><br>
+				Location: <input type="text" id="location" name="location" value="" /><br>
 				Genre: 
 				<select id="genre" name = "genre">
 					<option></option>
@@ -92,16 +92,16 @@
 
 
 
-	<sql:setDataSource var="snapshot" driver="com.mysql.jdbc.Driver"
+	<!--<sql:setDataSource var="snapshot" driver="com.mysql.jdbc.Driver"
 		url="jdbc:mysql://mymusicdb.c4bpngja197w.us-west-2.rds.amazonaws.com:3306/MusicOverDecades"
 		user="db_student" password="db-student" />
 
 	<sql:query dataSource="${snapshot}" var="result">
 SELECT name, genre from MusicOverDecades.artist;
-</sql:query>
+</sql:query>-->
 
 	<!-- Table creation-->
-	<div class="tables">
+	<!-- <div class="tables">
 		<table border="1" id="myTable" class="tablesorter">
 			<tr>
 				<th>name</th>
@@ -115,7 +115,7 @@ SELECT name, genre from MusicOverDecades.artist;
 				</tr>
 			</c:forEach>
 		</table>
-	</div>
+	</div>-->
 
 </body>
 </html>
