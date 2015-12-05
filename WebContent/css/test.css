@@ -16,6 +16,11 @@ form{
 	float:right;
 	
 }
+
+option, select {
+	color:grey;
+}
+
 input[type=text]{
 	color:grey;
 }
@@ -27,10 +32,11 @@ input[type=text]{
     padding: 0;
     margin: 0;
     display: inline-block;
-    position:fixed;
+    float:left;
 }
 .search{
 	margin: 5px;
+	width: 500px;
     padding: 0;
     overflow: auto;
     position:relative;

@@ -41,7 +41,7 @@
 				</button>
 
 				<!-- =============== hidden nav bar ===================== -->
-				<a class="navbar-brand" href="index.jsp">MOD</a>
+				 <a class = "navbar-brand" href="index.jsp"><img src="music-icon-logo.png" width="30" height="30"></a>
 			</div>
 
 			<div class="collapse navbar-collapse"
@@ -51,7 +51,6 @@
 					<li><a class="tabs" href="analytics.jsp">Analytics</a>
 					<li><a class="tabs" href="topcharts.jsp">Top Charts</a></li>
 					<li><a class="tabs" href="topartists.jsp">Top Artist</a></li>
-					<li><a class="tabs" href="topsongs.jsp">Top Songs</a></li>
 				</ul>
 			</div>
 		</div>
@@ -91,6 +90,12 @@
 					<option value="90s">1970-1980</option>
 					<option value="00s">1990-2000</option>
 					<option value="00s">2000-2010</option>
+				</select>
+				</div>
+				<div class="search"><div class="label">Result View:</div>
+				<select id="view" name = "view">
+					<option value="table">Table</option>
+					<option value="chart">Chart</option>
 				</select>
 				</div>
 				<input id="js-trigger-overlay" type="submit" value="Submit" onClick="onSubmit()"> 

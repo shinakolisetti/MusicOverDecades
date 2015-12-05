@@ -315,11 +315,10 @@ table#myTable {
  
  .tables {
    position: fixed;
-    top: 240px;
+    top: 100px;
     left: 20px;
     bottom: 20px;
-    right: 20px;
-    padding: 50px; 
+    right: 20px; 
     overflow-y: scroll;
     overflow-x: hidden;
  }
@@ -346,11 +345,22 @@ table#myTable {
 }
 
 /* Specifications div */
+.specifications a:link, .specifications a:visited {
+  color: blueviolet;
+  font-size: 21px;
+  text-decoration:none;
+}
+.specifications a:hover, .specifications a:active {
+  color: violet;
+  font-size: 21px;
+  text-decoration:none;
+}
+
 .specifications {
     position: absolute;
-   	top: 120px;
+   	top: 90px;
    	left: 60px;
-    bottom: 180px;
+    bottom: 130px;
     right: 60px;
    	margin-left:auto; 
     margin-right:auto;

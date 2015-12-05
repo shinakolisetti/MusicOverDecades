@@ -65,7 +65,6 @@ public class ChartConnector extends HttpServlet {
 				"<li><a class=\"tabs\" href=\"analytics.jsp\">Analytics</a>"+
 				"<li><a class=\"tabs\" href=\"topcharts.jsp\">Top Charts</a></li>"+
 				"<li><a class=\"tabs\" href=\"topartists.jsp\">Top Artist</a></li>"+
-				"<li><a class=\"tabs\" href=\"contact.jsp\">Other</a></li>"+
 				" </ul>"+
 				"</div>"+
 				"</div>"+

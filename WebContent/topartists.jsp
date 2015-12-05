@@ -45,7 +45,7 @@
 				</button>
 
 				<!-- =============== hidden nav bar ===================== -->
-				<a class="navbar-brand" href="index.jsp">MOD</a>
+				 <a class = "navbar-brand" href="index.jsp"><img src="music-icon-logo.png" width="30" height="30"></a>
 			</div>
 
 			<div class="collapse navbar-collapse"
@@ -55,7 +55,6 @@
 					<li><a class="tabs" href="analytics.jsp">Analytics</a>
 					<li><a class="tabs" href="topcharts.jsp">Top Charts</a></li>
 					<li><a class="tabs" href="topartists.jsp">Top Artist</a></li>
-					<li><a class="tabs" href="topsongs.jsp">Top Songs</a></li>
 				</ul>
 			</div>
 		</div>
@@ -86,7 +85,7 @@
 						<br> 
 				</div>
 				<div class="search"><div class="label">Genre:</div>
-				<select id="genre name = "genre">
+				<select id="genre" name = "genre">
 					<option value=""></option>
 					<option value="rock">rock</option>
 					<option value="hop">hip-hop/trip-hop</option>
