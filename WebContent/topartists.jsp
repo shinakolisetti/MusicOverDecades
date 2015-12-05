@@ -22,16 +22,11 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
 
-<!-- Demo styling -->
-<link href="tablesorter/docs/css/jq.css" rel="stylesheet">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-<!-- jQuery: required (tablesorter works with jQuery 1.2.3+) -->
-<!-- <script src="tablesorter/docs/js/jquery-1.2.6.min.js"></script>-->
-
-<!-- Pick a theme, load the plugin & initialize plugin -->
-<link href="tablesorter/css/theme.default.css" rel="stylesheet">
-<script src="tablesorter/js/jquery.tablesorter.min.js"></script>
-<script src="tablesorter/js/jquery.tablesorter.widgets.min.js"></script>
+<!-- Custom Javascript -->
+<script src="js/scripts.js"></script>
 
 <!-- Custom CSS -->
 <link href="css/style.css" rel="stylesheet">
