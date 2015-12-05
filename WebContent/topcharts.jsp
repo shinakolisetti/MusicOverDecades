@@ -66,7 +66,13 @@
 		<!-- container-->
 	</nav>
 
-	<sql:setDataSource var="snapshot" driver="com.mysql.jdbc.Driver"
+<!-- For all drop downs, text fields and query specification fields -->
+<div class="specifications">
+
+</div>
+
+
+<sql:setDataSource var="snapshot" driver="com.mysql.jdbc.Driver"
 		url="jdbc:mysql://mymusicdb.c4bpngja197w.us-west-2.rds.amazonaws.com:3306/MusicOverDecades"
 		user="db_student" password="db-student" />
 

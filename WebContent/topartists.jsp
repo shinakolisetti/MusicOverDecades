@@ -66,6 +66,11 @@
 		<!-- container-->
 	</nav>
 
+	<!-- For all drop downs, text fields and query specification fields -->
+	<div class="specifications">
+	
+	</div>
+
 	<sql:setDataSource var="snapshot" driver="com.mysql.jdbc.Driver"
 		url="jdbc:mysql://mymusicdb.c4bpngja197w.us-west-2.rds.amazonaws.com:3306/MusicOverDecades"
 		user="db_student" password="db-student" />
@@ -76,6 +81,7 @@
 		WHERE l1.listenerId = l2.listenerId AND a.artistId = l2.artistId AND a.location LIKE l1.location;
 	</sql:query>
 
+	
 	<!-- Table creation-->
 	<div class="tables">
 		<table cellspacing='0' border="1" id="myTable" class="tablesorter">
