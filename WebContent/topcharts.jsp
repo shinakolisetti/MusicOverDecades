@@ -23,7 +23,7 @@
 
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	
+
 <!-- Custom Javascript -->
 <script src="js/scripts.js"></script>
 
@@ -60,41 +60,61 @@
 		<!-- container-->
 	</nav>
 
-<!-- For all drop downs, text fields and query specification fields -->
-<div class="specifications">
-<select>
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="mercedes">Mercedes</option>
-  <option value="audi">Audi</option>
-</select>
-</div>
+	<!-- For all drop downs, text fields and query specification fields -->
+	<div class="specifications">
+		<form>
+			<fieldset>
+				<legend>Specify Your Search:</legend>
+				<div id="field">Location: <input type="text" id="location" name="location" value="Enter City or State" onClick='document.getElementById("location").value= "";' /><br></div>
+				Genre: 
+				<select id="genre">
+					<option>none</option>
+					<option>rock</option>
+					<option>hip-hop/trip-hop</option>
+					<option>classical</option>
+					<option>rap</option>
+					<option>jazz</option>
+					<option>metal</option>
+					<option>punk</option>
+					<option>country</option>
+					<option>dance/disco</option>
+					<option>electronic</option>
+					<option>pop</option>
+					<option>soundtrack</option>
+					<option>house/dub</option>
+				</select>
+						<br> 
+				<input type="submit" value="Submit" onClick="onSubmit()"> 
+			</fieldset>
+		</form>
+	</div>
 
 
-<sql:setDataSource var="snapshot" driver="com.mysql.jdbc.Driver"
+
+	<sql:setDataSource var="snapshot" driver="com.mysql.jdbc.Driver"
 		url="jdbc:mysql://mymusicdb.c4bpngja197w.us-west-2.rds.amazonaws.com:3306/MusicOverDecades"
 		user="db_student" password="db-student" />
 
-<sql:query dataSource="${snapshot}" var="result">
+	<sql:query dataSource="${snapshot}" var="result">
 SELECT name, genre from MusicOverDecades.artist;
 </sql:query>
 
 	<!-- Table creation-->
-<div class="tables">
-	<table border="1" id="myTable" class="tablesorter">
-		<tr>
-			<th>name</th>
-			<th>genre</th>
-
-		</tr>
-		<c:forEach var="row" items="${result.rows}">
+	<div class="tables">
+		<table border="1" id="myTable" class="tablesorter">
 			<tr>
-				<td><c:out value="${row.name}" /></td>
-				<td><c:out value="${row.genre}" /></td>
+				<th>name</th>
+				<th>genre</th>
+
 			</tr>
-		</c:forEach>
-	</table>
-</div>
+			<c:forEach var="row" items="${result.rows}">
+				<tr>
+					<td><c:out value="${row.name}" /></td>
+					<td><c:out value="${row.genre}" /></td>
+				</tr>
+			</c:forEach>
+		</table>
+	</div>
 
 </body>
 </html>
