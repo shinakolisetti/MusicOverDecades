@@ -31,7 +31,7 @@
                 </button>
 
                 <!-- =============== hidden nav bar ===================== -->
-                <a class = "navbar-brand" href="test.html">MOD</a>
+                <a class = "navbar-brand" href="index.jsp"><img src="music-icon-logo.png" width="30" height="30"></a>
             </div>
 
             <div class = "collapse navbar-collapse" id = "bs-example-navbar-collapse-1">
