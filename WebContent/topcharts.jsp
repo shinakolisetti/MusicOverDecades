@@ -53,7 +53,7 @@
 					<li><a class="tabs" href="analytics.jsp">Analytics</a>
 					<li><a class="tabs" href="topcharts.jsp">Top Charts</a></li>
 					<li><a class="tabs" href="topartists.jsp">Top Artist</a></li>
-					<li><a class="tabs" href="contact.jsp">Other</a></li>
+					<li><a class="tabs" href="topsongs.jsp">Top Songs</a></li>
 				</ul>
 			</div>
 		</div>
