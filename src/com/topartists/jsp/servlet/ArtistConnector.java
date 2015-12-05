@@ -18,41 +18,41 @@ import java.sql.SQLException;
 public class ArtistConnector extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// reading the user input
-		String location = request.getParameter("location").trim();
-		String genre = request.getParameter("genre").trim();
-		String age = request.getParameter("age").trim();
+		String location_field = request.getParameter("location").trim();
+		String genre_field = request.getParameter("genre").trim();
+		String age_field = request.getParameter("age").trim();
 
 		String sqlQuery="SELECT a.name, a.genre, a.location, l.age, count(*) as \'num_listeners\' FROM MusicOverDecades.artist a, MusicOverDecades.listeners l, MusicOverDecades.likes l1 WHERE a.artistId = l1.artistId AND l.listenerId = l1.listenerId";
-		if(location!="" && location != null){
-			sqlQuery += " AND a.location = l.location AND a.location LIKE \'%"+location+"%\'";
+		if(!location_field.equals("") && location_field != null){
+			sqlQuery += " AND a.location = l.location AND a.location LIKE \'%"+location_field+"%\'";
 		}
-		if(genre!="" && genre != null){
-			sqlQuery+= " AND a.genre LIKE \'%"+genre+"%\'";
+		if(!genre_field.equals("") && genre_field != null){
+			sqlQuery+= " AND a.genre LIKE \'%"+genre_field+"%\'";
 		}
-		if(age!="" && age != null){
-			if(age.equals("10_15")){
+		if(!age_field.equals("") && age_field != null){
+			if(age_field.equals("10_15")){
 				sqlQuery+= " AND l.age >= \'10\' AND l.age <= \'15\'";
-			} else if(age.equals("15_20")){
+			} else if(age_field.equals("15_20")){
 				sqlQuery+= " AND l.age >= \'15\' AND l.age <= \'20\'";
-			} else if(age.equals("20_25")){
+			} else if(age_field.equals("20_25")){
 				sqlQuery+= " AND l.age >= \'20\' AND l.age <= \'25\'";
-			} else if(age.equals("25_30")){
+			} else if(age_field.equals("25_30")){
 				sqlQuery+= " AND l.age >= \'25\' AND l.age <= \'30\'";
-			} else if(age.equals("30_35")){
+			} else if(age_field.equals("30_35")){
 				sqlQuery+= " AND l.age >= \'30\' AND l.age <= \'35\'";
-			} else if(age.equals("35_40")){
+			} else if(age_field.equals("35_40")){
 				sqlQuery+= " AND l.age >= \'35\' AND l.age <= \'40\'";
-			} else if(age.equals("40_45")){
+			} else if(age_field.equals("40_45")){
 				sqlQuery+= " AND l.age >= \'40\' AND l.age <= \'45\'";
-			} else if(age.equals("45_50")){
+			} else if(age_field.equals("45_50")){
 				sqlQuery+= " AND l.age >= \'45\' AND l.age <= \'50\'";
-			}  else if(age.equals("50_55")){
+			}  else if(age_field.equals("50_55")){
 				sqlQuery+= " AND l.age >= \'50\' AND l.age <= \'55\'";
-			}  else if(age.equals("55_60")){
+			}  else if(age_field.equals("55_60")){
 				sqlQuery+= " AND l.age >= \'55\' AND l.age <= \'60\'";
-			}  else if(age.equals("60_65")){
+			}  else if(age_field.equals("60_65")){
 				sqlQuery+= " AND l.age >= \'60\' AND l.age <= \'65\'";
-			}  else if(age.equals("65_70")){
+			}  else if(age_field.equals("65_70")){
 				sqlQuery+= " AND l.age >= \'65\' AND l.age <= \'70\'";
 			}  
 
@@ -126,27 +126,35 @@ public class ArtistConnector extends HttpServlet {
 					+"<tr>"
 					+"<th></th>"
 					+"<th>Artist Name</th>"
-					+"<th>Artist Location</th>"
-					+"<th>Genre</th>"
-					+"<th>Listener Age</th>"
-					+"<th>Listener Count</th>"
+					+"<th>Artist Location</th>"+
+					"<th>Genre</th>";
+			if(!age_field.equals("")&&age_field!=null){
+				output+="<th>Listener Age</th>";
+			}
+			output+="<th>Listener Count</th>"
 					+"</tr>";
+
 			int i=1;
 			while(resultSet.next()){
 				String name=resultSet.getString("name");
-				location = resultSet.getString("location");
-				age=resultSet.getString("age");
+				String location = resultSet.getString("location");
+				String age="";
+				if(!age_field.equals("")&&age_field!=null){
+					age=resultSet.getString("age");
+				}
 				String num_listeners = resultSet.getString("num_listeners");
-				genre=resultSet.getString("genre");				
-				if((name!=null||name!="") && (location!=null||location!="")){
+				String genre=resultSet.getString("genre");				
+				if(name!=null && location!=null){
 					output+="<tr>"
 							+"<th>"+ i++ +"</th>"
 							+"<td>"+name+"</td>"
 							+"<td>"+location+"</td>"
-							+"<td>"+genre+"</td>"
-							+"<td>"+age+"</td>"
-							+"<td>"+num_listeners+"</td>"
-							+"</tr>";
+							+"<td>"+genre+"</td>";
+					if(!age.equals("")&&age!=null){
+						output+="<td>"+age+"</td>";
+					}
+					output+="<td>"+num_listeners+"</td>"
+							+"</tr></div>";
 				}
 			}
 
