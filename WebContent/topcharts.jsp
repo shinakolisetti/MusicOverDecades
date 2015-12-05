@@ -65,7 +65,7 @@
 		<form>
 			<fieldset>
 				<legend>Specify Your Search:</legend>
-				<div id="field">Location: <input type="text" id="location" name="location" value="Enter City or State" onClick='document.getElementById("location").value= "";' /><br></div>
+				Location: <input type="text" id="location" name="location" value="Enter City or State" onClick='document.getElementById("location").value= "";' /><br>
 				Genre: 
 				<select id="genre">
 					<option>none</option>
@@ -88,6 +88,7 @@
 			</fieldset>
 		</form>
 	</div>
+	
 
 
 
