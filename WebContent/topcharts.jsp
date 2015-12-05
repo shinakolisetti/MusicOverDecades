@@ -62,26 +62,26 @@
 
 	<!-- For all drop downs, text fields and query specification fields -->
 	<div class="specifications">
-		<form>
+		<form action="MusicServlet">
 			<fieldset>
 				<legend>Specify Your Search:</legend>
 				Location: <input type="text" id="location" name="location" value="Enter City or State" onClick='document.getElementById("location").value= "";' /><br>
 				Genre: 
-				<select id="genre">
+				<select id="genre" name = "genre">
 					<option></option>
-					<option>rock</option>
-					<option>hip-hop/trip-hop</option>
-					<option>classical</option>
-					<option>rap</option>
-					<option>jazz</option>
-					<option>metal</option>
-					<option>punk</option>
-					<option>country</option>
-					<option>dance/disco</option>
-					<option>electronic</option>
-					<option>pop</option>
-					<option>soundtrack</option>
-					<option>house/dub</option>
+					<option value="rock">rock</option>
+					<option value="hop">hip-hop/trip-hop</option>
+					<option value="classical">classical</option>
+					<option value="rap">rap</option>
+					<option value="jazz">jazz</option>
+					<option value="metal">metal</option>
+					<option value="punk">punk</option>
+					<option value="country">country</option>
+					<option value="disco">dance/disco</option>
+					<option value="electronic">electronic</option>
+					<option value="pop">pop</option>
+					<option value="soundtrack">soundtrack</option>
+					<option value="house">house/dub</option>
 				</select>
 						<br> 
 				<input type="submit" value="Submit" onClick="onSubmit()"> 
