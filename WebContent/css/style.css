@@ -140,14 +140,22 @@ hr{
     max-width: 400px;
     border-color: #999999;
 }
+.jumbotron {
+    padding-bottom: 0;
+}
 /*Description para*/
 p.center{
     text-align: -webkit-center;
+    font-family: georgia;
+    font-size: 28px;
+    margin-left: 166px;
+    margin-right: 166px
 }
 /*Margin alignment*/
 .row{
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: 111px;
+    margin-right: 111px;
+    margin-bottom: 80px;
 }
 /*icons*/
 .col-md-1 {

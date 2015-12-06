@@ -53,7 +53,7 @@
 				<ul class="nav navbar-nav">
 					<li><a class="tabs" href="index.jsp">Home</a></li>
 					<li><a class="tabs" href="analytics.jsp">Analytics</a>
-					<li><a class="tabs" href="topcharts.jsp">Top Charts</a></li>
+					<li><a class="tabs" href="topcharts.jsp">Music Popularity</a></li>
 					<li><a class="tabs" href="topartists.jsp">Top Artist</a></li>
 				</ul>
 			</div>

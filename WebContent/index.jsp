@@ -38,7 +38,7 @@
                 <ul class="nav navbar-nav">
                    <li><a class="tabs" href="index.jsp">Home</a></li>
 					<li><a class="tabs" href="analytics.jsp">Analytics</a>
-					<li><a class="tabs" href="topcharts.jsp">Top Charts</a></li>
+					<li><a class="tabs" href="topcharts.jsp">Music Popularity</a></li>
 					<li><a class="tabs" href="topartists.jsp">Top Artist</a></li>
                 </ul>
             </div>
@@ -50,44 +50,20 @@
 				<ol class="carousel-indicators">
 					<li class="active" data-slide-to="0" data-target="#carousel-66737">
 					</li>
-					<li data-slide-to="1" data-target="#carousel-66737">
+					<li  data-slide-to="1" data-target="#carousel-66737">
 					</li>
 					<li data-slide-to="2" data-target="#carousel-66737">
 					</li>
 				</ol>
 				<div class="carousel-inner">
 					<div class="item active">
-						<img alt="Carousel Bootstrap First" src="poster.jpg">
-						<!--<div class="carousel-caption">
-							<h4>
-								First Thumbnail label
-							</h4>
-							<p>
-								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-							</p>
-						</div>-->
+						<img alt="Carousel Bootstrap First" src="music.jpg">
 					</div>
 					<div class="item">
-						<img alt="Carousel Bootstrap Second" src="music.jpg">
-						<!--<div class="carousel-caption">
-							<h4>
-								Second Thumbnail label
-							</h4>
-							<p>
-								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-							</p>
-						</div>-->
+						<img alt="Carousel Bootstrap Second" src="poster.jpg">
 					</div>
 					<div class="item">
 						<img alt="Carousel Bootstrap Third" src="classic.jpg">
-						<!--<div class="carousel-caption">
-							<h4>
-								Third Thumbnail label
-							</h4>
-							<p>
-								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-							</p>
-						</div>-->
 					</div>
 				</div> 
 					<a class="left carousel-control" href="#carousel-66737" data-slide="prev">
@@ -98,11 +74,12 @@
 					</a>
 			</div>
 			<div class="jumbotron">
-				<h2 class = "heading">
-					Welcome to Music Over Decades
+				<h2 class = "heading" >
+					<img src ="music-logo-banner.png">
 				</h2>
 				<p class = "center">
-					This is a website where you can find trends in music throughout the decades and figure out how to use this data to help artists advertise, see how you can analyze this data for marketing efforts and more. (EDIT)
+					Our mission is to find trends in music throughout the decades and figure 
+					out how to use this data to help artists advertise, see how you can analyze this data for marketing efforts and more.
 				</p>
 				<!--<p>
 					<a class="btn btn-primary btn-large" href="#">Learn more</a>
@@ -113,38 +90,32 @@
 	<div class="row">
 		<div><h2 class = "heading"> Analyze Data </h2><hr></div>
 
-		<div class="col-md-5">
-			<h3 class = "heading">Music Popularity</h3>
+		<div class="col-md-3">
+			<h3 class = "heading">Analytics</h3>
 			<p>
-				Popularity by Locations and genre. Marketing ideas for hosting concerts, New raising artist can analyze data and choose suitable location to perform at.
-			</p>
-		</div>
-		<div class="col-md-1">&#x266b;</div>
-		<div class="col-md-5">
-			<h3 class = "heading">More Analytics</h3>
-			<p>
-				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+				We calculate which genres are most popular for specific time period. This data is useful for record labels to decide which artists to sign
+				based on the genre they perform for that current decade. This data is also useful for musical analytics and research purposes. 
 			</p>
 		</div>
 		<div class="col-md-1">&#x270e;</div>
-	</div>
-	<div class="row">
-		<div class="col-md-5">
+		<div class="col-md-3">
 			<h3 class = "heading">Top Artists</h3>
 			<p>
-				Check out who's on the top of the list. Compare why and how they are on the top. Check their hotness, dance ability, genre and more.
+				Check out who's on the top of the list. Compare why and how they are on the top. Check their hotness, genre and what type of listeners to attract. 
+				Based on this data, advertisers can choose their target audience.
 			</p>
 			
 		</div>
 		<div class="col-md-1">&#x265a;</div>
-		<div class="col-md-5">
-			<h3 class = "heading">Top Songs</h3>
+		<div class="col-md-3">
+			<h3 class = "heading">Music Popularity</h3>
 			<p>
 				Which songs is on the top? Compare and analyze the data based on familiarity and years.
+				Popularity by Locations and genre. Marketing ideas for hosting concerts. New raising artist can analyze data and choose suitable location to perform at.
 			</p>
 			
 		</div>
-		<div class="col-md-1">&#x2606;</div>
+		<div class="col-md-1">&#x266b;</div>
 	</div>
 </div>
 
