@@ -75,7 +75,7 @@
 			</div>
 			<div class="jumbotron">
 				<h2 class = "heading" >
-					<img src ="music-logo-banner.png">
+				<img src ="music-logo-banner.png"><img src="music-icon-logo1.png">
 				</h2>
 				<p class = "center">
 					Our mission is to find trends in music throughout the decades and figure 
@@ -115,7 +115,7 @@
 			</p>
 			
 		</div>
-		<div class="col-md-1">&#x266b;</div>
+		<div class="col-md-1">&#x2606;</div>
 	</div>
 </div>
 
