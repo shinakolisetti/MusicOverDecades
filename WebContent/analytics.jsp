@@ -94,7 +94,7 @@
 				<div class="search"><div class="label">Result View:</div>
 				<select id="view" name = "view">
 					<option value="table">Table</option>
-					<option value="chart">Chart</option>
+					<option value="chart" disabled><s>Chart (disabled)</s></option>
 				</select>
 				</div>
 				<input id="js-trigger-overlay" type="submit" value="Submit" onClick="onSubmit()"> 
