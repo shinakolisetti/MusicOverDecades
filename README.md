@@ -10,4 +10,4 @@ Languages and frameworks used:
 
 HTML, CSS, Bootstrap, SQL, Java, Java server pages
 
-> The site is not up and running but you can check the pdf to get more indept detail about the project
+> The site is not up and running but you can check the power point presentation to get more indept detail about the project
