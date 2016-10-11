@@ -8,16 +8,6 @@ A research based project on music to find trends in music throughout the decades
 
 Languages and frameworks used:
 
-HTML
-
-CSS
-
-Bootstrap
-
-SQL
-
-Java
-
-Java server pages
+HTML, CSS, Bootstrap, SQL, Java, Java server pages
 
 > The site is not up and running but you can check the pdf to get more indept detail about the project
